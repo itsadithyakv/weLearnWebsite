@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>weLearn India</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav id="navbar" class="transparent">
+    <div class="nav-left">
+      <a href="index.html" class="logo-link"><img src="files/logo.png" alt="weLearn logo" class="nav-logo" /></a>
+      <span class="nav-title">weLearn India</span>
+    </div>
+
+    <ul class="nav-center" role="menubar" aria-label="Primary">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="dropdown" id="courses-dropdown">
+        <button id="courses-btn" class="courses-btn" aria-haspopup="true" aria-expanded="false">Courses ▾</button>
+        <div id="courses-menu" class="dropdown-menu" role="menu" aria-hidden="true">
+          <a href="Courses/Vakya.html" role="menuitem">Vakya</a>
+          <a href="Courses/Vartha.html" role="menuitem">Vartha</a>
+          <a href="Courses/Prudentia.html" role="menuitem">Prudentia</a>
+          <a href="Courses/Oratio.html" role="menuitem">Oratio</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+    <h1>Empowering the next</h1>
+    <h2>
+      generation of
+      <span id="dynamic-word" class="dynamic-word" aria-hidden="true"></span>
+      <span id="cursor" class="cursor">|</span>
+    </h2>
+    <p class="hero-sub">Through creative learning, mentorship and real projects.</p>
+    <a href="contact.html" class="btn-primary cta-hero">Contact Us</a>
+  </div>
+
+  <!-- Collage stays as is on your right side -->
+  <div class="photo-collage" aria-hidden="true">
+    <div class="photo-card" style="--rotate:-12deg;">
+      <img src="files/images/image1.JPG" alt="Team learning">
+      <span class="caption">Team Spirit</span>
+    </div>
+    <div class="photo-card" style="--rotate:8deg;">
+      <img src="files/images/image2.JPG" alt="Creative">
+      <span class="caption">Big Ideas</span>
+    </div>
+    <div class="photo-card" style="--rotate:-4deg;">
+      <img src="files/images/image3.JPG" alt="Project">
+      <span class="caption">Hands On</span>
+    </div>
+  </div>
+    <!-- Floating doodles (translucent light-blue) -->
+    <div class="floating-doodles" aria-hidden="true">
+      <img src="files/icons/sun.svg" class="doodle" style="--size:120px; --x:10%; --y:12%; --rot:12deg; --speed:9s;">
+      <img src="files/icons/people.svg" class="doodle" style="--size:100px; --x:75%; --y:10%; --rot:-14deg; --speed:11s;">
+      <img src="files/icons/chat.svg" class="doodle" style="--size:140px; --x:62%; --y:64%; --rot:4deg; --speed:13s;">
+      <img src="files/icons/idea.svg" class="doodle" style="--size:160px; --x:18%; --y:76%; --rot:-8deg; --speed:10s;">
+    </div>
+  </section>
+
+  <!-- Example second section (fade in on scroll) -->
+  <section class="features fade-in">
+    <h3>Why Choose WeLearn?</h3>
+    <div class="feature-grid">
+      <div class="feature">Interactive Learning</div>
+      <div class="feature">Mentorship from Experts</div>
+      <div class="feature">Real-World Projects</div>
+      <div class="feature">Community Driven</div>
+    </div>
+  </section>
+
+  <!-- FOOTER glass -->
+  <footer class="footer-glass">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener"><img src="files/icons/insta.svg" alt="Instagram"></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener"><img src="files/icons/link.svg" alt="LinkedIn"></a>
+      </div>
+      <p>© 2025 weLearn India — Empowering Minds, Inspiring Futures.</p>
+    </div>
+  </footer>
+</body>
+</html>
