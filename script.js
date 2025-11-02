@@ -62,13 +62,23 @@ setInterval(() => {
 
 /* ---------------- NAVBAR glass on scroll ---------------- */
 const navbar = document.getElementById("navbar");
-function handleNavScroll(){
-  const hero = document.querySelector(".hero");
-  if(!hero) return;
+
+function handleNavScroll() {
+  // Look for hero on any page
+  const hero = document.querySelector(".hero, .about-hero"); 
+  if (!hero) return; // safety check
+
   const threshold = hero.getBoundingClientRect().height - 80;
-  if(window.scrollY > threshold) navbar.classList.add("glass"), navbar.classList.remove("transparent");
-  else navbar.classList.remove("glass"), navbar.classList.add("transparent");
+
+  if (window.scrollY > threshold) {
+    navbar.classList.add("glass");
+    navbar.classList.remove("transparent");
+  } else {
+    navbar.classList.remove("glass");
+    navbar.classList.add("transparent");
+  }
 }
+
 window.addEventListener("scroll", handleNavScroll);
 handleNavScroll();
 
@@ -77,24 +87,33 @@ const coursesBtn = document.getElementById("courses-btn");
 const coursesMenu = document.getElementById("courses-menu");
 const dropdown = document.getElementById("courses-dropdown");
 
-function openDropdown(){
+function openDropdown() {
   coursesMenu.style.display = "block";
-  coursesMenu.setAttribute("aria-hidden","false");
-  coursesBtn.setAttribute("aria-expanded","true");
+  coursesMenu.setAttribute("aria-hidden", "false");
+  coursesBtn.setAttribute("aria-expanded", "true");
 }
-function closeDropdown(){
+
+function closeDropdown() {
   coursesMenu.style.display = "none";
-  coursesMenu.setAttribute("aria-hidden","true");
-  coursesBtn.setAttribute("aria-expanded","false");
+  coursesMenu.setAttribute("aria-hidden", "true");
+  coursesBtn.setAttribute("aria-expanded", "false");
 }
+
 coursesBtn.addEventListener("click", (e) => {
   e.stopPropagation();
-  if(coursesMenu.style.display === "block") closeDropdown(); else openDropdown();
+  if (coursesMenu.style.display === "block") closeDropdown();
+  else openDropdown();
 });
+
 document.addEventListener("click", (e) => {
-  if(!dropdown.contains(e.target)) closeDropdown();
+  if (!dropdown.contains(e.target)) closeDropdown();
 });
-window.addEventListener("resize", () => { if(window.innerWidth < 600) closeDropdown(); });
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 600) closeDropdown();
+});
+
+
 
 /* ---------------- subtle parallax for doodles when mouse moves ---------------- */
 document.addEventListener("mousemove", (e) => {
