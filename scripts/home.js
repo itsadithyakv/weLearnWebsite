@@ -11,3 +11,21 @@ function handleFadeIn() {
 }
 window.addEventListener('scroll', handleFadeIn);
 handleFadeIn(); // initial check
+
+// scroll-fade.js
+const cards = document.querySelectorAll('.feature-card');
+
+function fadeInOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if (cardTop < triggerBottom) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', fadeInOnScroll);
+window.addEventListener('load', fadeInOnScroll); // trigger on page load
