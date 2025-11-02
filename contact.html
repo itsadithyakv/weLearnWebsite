@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - weLearn India</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/contact.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav id="navbar" class="transparent">
+    <div class="nav-left">
+      <a href="index.html" class="logo-link"><img src="files/logo.png" alt="weLearn logo" class="nav-logo" /></a>
+      <span class="nav-title">weLearn India</span>
+    </div>
+
+    <ul class="nav-center" role="menubar" aria-label="Primary">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="dropdown" id="courses-dropdown">
+        <button id="courses-btn" class="courses-btn" aria-haspopup="true" aria-expanded="false">Courses ▾</button>
+        <div id="courses-menu" class="dropdown-menu" role="menu" aria-hidden="true">
+          <a href="Courses/Vakya.html" role="menuitem">Vakya</a>
+          <a href="Courses/Vartha.html" role="menuitem">Vartha</a>
+          <a href="Courses/Prudentia.html" role="menuitem">Prudentia</a>
+          <a href="Courses/Oratio.html" role="menuitem">Oratio</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="contact-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Get in Touch with <span class="highlight">weLearn India</span></h1>
+      <p class="hero-sub">We’d love to hear from you! Reach out via email, phone, or social media.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+<section class="contact-section">
+  <h2 class="section-title center">Contact Methods</h2>
+  <div class="contact-cards-container">
+
+    <!-- Email Card -->
+    <div class="contact-card">
+      <img src="files/icons/email.svg" alt="Email Icon" class="contact-icon">
+      <h3>Email</h3>
+      <p><a href="mailto:contact@welearnindia.com">contact@welearnindia.com</a></p>
+    </div>
+
+    <!-- Phone Card -->
+    <div class="contact-card">
+      <img src="files/icons/phone.svg" alt="Phone Icon" class="contact-icon">
+      <h3>Phone</h3>
+      <p>+91 9876543210</p>
+    </div>
+
+    <!-- Social Media Card -->
+    <div class="contact-card">
+      <img src="files/icons/social.svg" alt="Social Media Icon" class="contact-icon">
+      <h3>Social Media</h3>
+      <p>
+        <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <h2 class="section-title center">Frequently Asked Questions</h2>
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How can I join a course?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        <p>You can check the Courses page and register for the program that suits you.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you have programs outside India?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Currently our programs are India-focused, but online sessions are accessible worldwide.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How can I collaborate with weLearn India?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Fill out the contact form or email us directly for partnerships and collaborations.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT FORM CTA SECTION -->
+<section class="contact-cta">
+  <div class="cta-text">
+    <h2>Ready to Connect?</h2>
+    <p>We’d love to hear from you! Share your ideas, feedback, or partnership proposals using our contact form.</p>
+    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" class="google-form-btn">
+      Fill Out Our Contact Form
+    </a>
+  </div>
+  <div class="cta-image">
+    <img src="files/images/contact/cta.png" alt="Contact Illustration">
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Brand / Logo inline -->
+    <div class="footer-brand">
+      <div class="brand-inline">
+        <img src="files/logo.png" alt="WeLearn Logo" class="footer-logo" />
+        <h3>WeLearn India</h3>
+      </div>
+      <p>Empowering knowledge with modern tech & design.</p>
+    </div>
+
+    <!-- Social Media --> 
+    <div class="footer-social">
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+          <img src="files/icons/insta.svg" alt="Instagram" />
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img src="files/icons/link.svg" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 WeLearn. All rights reserved.</p>
+    <p>Made by <a href="mailto:adithyakrishnan.vinod@gmail.com" target="_blank" rel="noopener noreferrer">Adithya KV</a></p>
+  </div>
+</footer>
+
+  <script>
+    // FAQ toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

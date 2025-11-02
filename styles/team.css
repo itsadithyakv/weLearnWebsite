@@ -89,13 +89,7 @@
     }
     }
 
-
-
-
-
-    
-
-    /* ---------- TEAM MEMBERS GRID (3 columns) ---------- */
+/* ---------- TEAM MEMBERS GRID (3 columns) ---------- */
  .members-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

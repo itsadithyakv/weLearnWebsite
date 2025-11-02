@@ -59,18 +59,33 @@ setInterval(() => {
   if (cursor) cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
 }, 600);
 
-
-/* ---------------- NAVBAR glass on scroll ---------------- */
+/* ---------- NAVBAR glass effect on scroll (works on all pages) ---------- */
 const navbar = document.getElementById("navbar");
 
 function handleNavScroll() {
-  // Look for hero on any page
-  const hero = document.querySelector(".hero, .about-hero"); 
-  if (!hero) return; // safety check
+  // Find hero section for any page
+  const hero =
+    document.querySelector(".hero") ||
+    document.querySelector(".about-hero") ||
+    document.querySelector(".team-hero") ||
+    document.querySelector(".contact-hero");
 
-  const threshold = hero.getBoundingClientRect().height - 80;
+  // If no hero found, just apply glass when scrolled past 80px
+  if (!hero) {
+    if (window.scrollY > 80) {
+      navbar.classList.add("glass");
+      navbar.classList.remove("transparent");
+    } else {
+      navbar.classList.remove("glass");
+      navbar.classList.add("transparent");
+    }
+    return;
+  }
 
-  if (window.scrollY > threshold) {
+  // Get the height of the hero to decide when to trigger the glass effect
+  const heroHeight = hero.offsetHeight - 80;
+
+  if (window.scrollY > heroHeight) {
     navbar.classList.add("glass");
     navbar.classList.remove("transparent");
   } else {
@@ -79,8 +94,13 @@ function handleNavScroll() {
   }
 }
 
+// Run once after full load
+window.addEventListener("load", handleNavScroll);
+// Run when scrolling
 window.addEventListener("scroll", handleNavScroll);
-handleNavScroll();
+// Also run if window resizes
+window.addEventListener("resize", handleNavScroll);
+
 
 /* ---------------- DROPDOWN toggle (click - stays open until click outside) ---------------- */
 const coursesBtn = document.getElementById("courses-btn");
