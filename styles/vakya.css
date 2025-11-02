@@ -32,8 +32,7 @@
 
 .course-hero .highlight {
   color: #00b3ff;
-  text-shadow: 0 0 15px rgba(0,179,255,0.8);
-  animation: pulse-glow 3s infinite alternate;
+  text-shadow: 0 0 5px rgba(0,179,255,0.8);
 }
 
 .hero-sub {
@@ -195,7 +194,6 @@ display: grid;
 }
 
 
-
 /* ---------- CALL TO ACTION (CENTERED GLASSMORPHIC) ---------- */
 .cta-section {
   display: flex;
@@ -220,7 +218,6 @@ display: grid;
   font-size: 3rem;
   color: #00b3ff;
   margin-bottom: 1rem;
-  animation: pulse-glow 2.5s infinite alternate;
 }
 
 .cta-content p {
@@ -249,12 +246,7 @@ display: grid;
   box-shadow: 0 0 20px rgba(0, 179, 255, 0.6);
 }
 
-/* Glow animation */
-@keyframes pulse-glow {
-  0% { text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4); }
-  50% { text-shadow: 0 0 10px #00e0ff, 0 0 18px rgba(0,224,255,0.5); }
-  100% { text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4); }
-}
+
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {

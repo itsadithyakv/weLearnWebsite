@@ -133,6 +133,58 @@ window.addEventListener("resize", () => {
   if (window.innerWidth < 600) closeDropdown();
 });
 
+/* ---------------- TESTIMONIAL CAROUSEL ---------------- */
+const testimonialTrack = document.querySelector('.testimonial-track');
+if(testimonialTrack){
+  const testimonialItems = Array.from(testimonialTrack.children);
+  const testimonialDotsContainer = document.querySelector('.testimonial-dots');
+  let testimonialIndex = 0;
+  const scrollInterval = 3500;
+  let testimonialAutoScroll;
+
+  // Create dots dynamically
+  testimonialItems.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    testimonialDotsContainer.appendChild(dot);
+
+    dot.addEventListener('click', () => {
+      testimonialIndex = i;
+      updateTestimonialCarousel();
+      resetTestimonialInterval();
+    });
+  });
+
+  function updateTestimonialCarousel() {
+    const cardWidth = testimonialItems[0].offsetWidth + 16; // 16 = gap between cards
+    testimonialTrack.style.transform = `translateX(-${testimonialIndex * cardWidth}px)`;
+
+    const dots = Array.from(testimonialDotsContainer.children);
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[testimonialIndex].classList.add('active');
+  }
+
+  // Auto-scroll function
+  function startAutoScroll() {
+    testimonialAutoScroll = setInterval(() => {
+      testimonialIndex = (testimonialIndex + 1) % testimonialItems.length;
+      updateTestimonialCarousel();
+    }, scrollInterval);
+  }
+
+  function resetTestimonialInterval() {
+    clearInterval(testimonialAutoScroll);
+    startAutoScroll();
+  }
+
+  // Initialize carousel
+  updateTestimonialCarousel();
+  startAutoScroll();
+
+  // Optional: update on window resize to keep alignment
+  window.addEventListener('resize', updateTestimonialCarousel);
+}
 
 
 /* ---------------- subtle parallax for doodles when mouse moves ---------------- */

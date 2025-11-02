@@ -32,8 +32,7 @@
 
 .course-hero .highlight {
   color: #00b3ff;
-  text-shadow: 0 0 15px rgba(0,179,255,0.8);
-  animation: pulse-glow 3s infinite alternate;
+  text-shadow: 0 0 5px rgba(0,179,255,0.8);
 }
 
 .hero-sub {
@@ -193,6 +192,7 @@ display: grid;
   color: #eef9ff;
   margin-bottom: 2rem;
 }
+
 
 
 
