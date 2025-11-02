@@ -35,15 +35,10 @@
 
     .hero-content .highlight {
     color: #00b3ff;
-    text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4);
+    text-shadow: 0 0 6px #00b3ff, 0 0 px rgba(0,179,255,0.4);
     animation: pulse-glow 2.5s infinite alternate;
     }
 
-    @keyframes pulse-glow {
-    0% { text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4); }
-    50% { text-shadow: 0 0 10px #00e0ff, 0 0 18px rgba(0,224,255,0.5); }
-    100% { text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4); }
-    }
 
     .hero-sub {
     font-family: "NatureLight";

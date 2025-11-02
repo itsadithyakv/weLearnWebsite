@@ -42,11 +42,7 @@
   color: rgba(255,255,255,0.9);
 }
 
-@keyframes pulse-glow {
-  0% { text-shadow: 0 0 8px #00b3ff; }
-  50% { text-shadow: 0 0 20px #00e0ff; }
-  100% { text-shadow: 0 0 8px #00b3ff; }
-}
+
 
 /* ABOUT SECTION */
 .course-intro {

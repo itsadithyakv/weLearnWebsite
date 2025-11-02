@@ -14,7 +14,7 @@
   position: absolute;
   inset: 0;
   background: url('../files/images/contact/contacthero.jpg') center/cover no-repeat;
-  filter: blur(6px) brightness(0.6);
+  filter: blur(6px) brightness(0.4);
   z-index: 1;
 }
 
@@ -32,8 +32,6 @@
 
 .contact-hero .hero-content .highlight {
   color: #00b3ff;
-  text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4);
-  animation: pulse-glow 2.5s infinite alternate;
 }
 
 .contact-hero .hero-sub {
