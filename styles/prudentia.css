@@ -160,25 +160,34 @@ display: grid;
 }
 
 
-.outcomes-section .outcome-icon {
-  font-size: 3rem; /* size of the emoji */
-  color: #00b3ff;  /* blue color */
-  margin-bottom: 1rem;
-  display: inline-block;
+.outcomes-section .outcome-card {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+  perspective: 800px; /* 3D tilt */
+  position: relative;
+  z-index: 30; /* above everything */
 }
 
-.outcomes-section .outcome-card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+.outcomes-section .outcome-card .outcome-icon{
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: #00b3ff;
+  text-shadow: 0 3px 8px rgba(0,170,255,0.35);
+  transition: transform 0.35s ease;
 }
 
 .outcomes-section .outcome-card:hover {
   background: rgba(0,179,255,0.15);
   transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 179, 255, 0.3);
 }
 
 .outcomes-section .section-title {
