@@ -1,53 +1,36 @@
 /* ===== FONTS ===== */
 @font-face {
   font-family: "NatureRegular";
-  src: url("fonts/ZTNature-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "NatureBold";
-  src: url("fonts/ZTNature-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "NatureBlack";
-  src: url("fonts/ZTNature-Black.woff2") format("woff2");
+  src: url("fonts/ZTNature-Regular.woff2");
 }
 @font-face {
   font-family: "NatureLight";
-  src: url("fonts/ZTNature-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "NatureThin";
-  src: url("fonts/ZTNature-Thin.woff2") format("woff2");
-}
-@font-face {
-  font-family: 'NatureMedium';
-  src: url("fonts/ZTNature-Medium.woff2") format("woff2");
+  src: url("fonts/ZTNature-Light.woff2");
 }
 @font-face {
   font-family: "NatureBold";
-  src: url("files/fonts/NatureBold.woff2");
+  src: url("fonts/ZTNature-Bold.woff2");
 }
 @font-face {
   font-family: "NatureRegular";
-  src: url("files/fonts/NatureRegular.woff2");
+  src: url("fonts/ZTNature-Regular.woff2");
 }
 @font-face {
   font-family: "NatureLight";
-  src: url("files/fonts/NatureLight.woff2");
+  src: url("fonts/ZTNature-Light.woff2");
 }
 @font-face {
-  font-family: "NatureBold";
-  src: url("files/fonts/NatureBold.woff2");
+  font-family: 'NatureThin';
+  src: url('fonts/ZTNature-Thin.woff2');
 }
 @font-face {
-  font-family: "NatureRegular";
-  src: url("files/fonts/NatureRegular.woff2");
+  font-family: ('NatureMedium');
+  src: url('fonts/ZTNature-Medium.woff2');
 }
 @font-face {
-  font-family: "NatureLight";
-  src: url("files/fonts/NatureLight.woff2");
+  font-family: 'ExtraLight';
+  src: url('fonts/ZTNature-ExtraLight.woff2');
 }
-
 
 :root{
   --bg:#071018;
