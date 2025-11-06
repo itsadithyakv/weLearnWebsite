@@ -1,12 +1,8 @@
-/* ========== home.css ========== */
-
-/* HERO layout: vertically centered text on left, collage on right */
+/* ---------- HERO SECTION ---------- */
 .hero{
   min-height:100vh; padding:4rem 4.5%; display:flex; align-items:center; justify-content:space-between; gap:2rem; position:relative; overflow:hidden;
   background: linear-gradient(140deg, #031226 0%, #071a2a 60%, #02121a 100%);
 }
-
-/* HERO CONTENT - vertically centered and left aligned in page */
 .hero-content{
   z-index:6; width:42%; display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
   text-align:left;
@@ -15,12 +11,26 @@
 .hero-content h2{ font-family:"NatureBold"; font-size:2.6rem; margin:6px 0 8px; color:#eaf6ff; display:flex; align-items:center; gap:.5rem; }
 .hero-sub{ font-family:"NatureLight"; color:var(--muted); margin-bottom:1rem; }
 
-/* dynamic word + caret */
-.dynamic-word{ color:var(--accent); text-shadow: 0 0 10px rgba(0,170,255,0.65); }
-.cursor{ color:var(--accent); margin-left:4px; font-weight:700; animation: blink 700ms steps(2,end) infinite; }
-@keyframes blink{ 50%{ opacity:0 } }
+.dynamic-word {
+  color: #00aaff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0,170,255,0.65);
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #00aaff;
+  animation: typing-cursor 0.7s step-end infinite;
+}
 
-/* CTA */
+.cursor {
+  display: none;
+}
+
+@keyframes typing-cursor {
+  50% { border-color: transparent; }
+}
+
+
 .btn-primary.cta-hero{ display:inline-block; background:linear-gradient(90deg,#00b3ff,#00e0ff); color:#022026; padding:.8rem 1.3rem; border-radius:14px; font-weight:700; box-shadow:0 10px 40px rgba(0,170,255,0.14); text-decoration:none; transition: transform .18s ease, box-shadow .18s ease; }
 .btn-primary.cta-hero:hover{ transform: translateY(-6px); box-shadow:0 22px 60px rgba(0,170,255,0.22); }
 
@@ -33,16 +43,14 @@
 /* hover */
 .photo-card:hover{ transform: rotate(0deg) scale(1.16) translateY(-20px); z-index:12; box-shadow:0 40px 110px rgba(0,8,18,0.85); }
 
-/* initial positions */
 .photo-card:nth-child(1){ left:0; top:70px; }
 .photo-card:nth-child(2){ left:260px; top:10px; }
 .photo-card:nth-child(3){ left:520px; top:90px; }
 
-/* DOODLES - translucent light-blue + varied sizes and motion */
 .floating-doodles {
   position: absolute;
   inset: 0;
-  z-index: 0; /* 👈 Push behind collage + hero text */
+  z-index: 0; 
   pointer-events: none;
 }
 
@@ -63,8 +71,6 @@
   50%  { transform: translateY(-10px) rotate(calc(var(--rot) + 3deg)); }
   100% { transform: translateY(6px) rotate(calc(var(--rot) - 3deg)); }
 }
-
-/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 1200px) {
   .hero {

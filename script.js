@@ -1,63 +1,43 @@
-/* ---------------- SMOOTH TYPING EFFECT (no flicker, glowing, cursor) ---------------- */
 const words = ["Leaders", "Creators", "Visionaries", "Innovators"];
 const dyn = document.getElementById("dynamic-word");
-const cursor = document.getElementById("cursor");
 
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-const typeSpeed = 110;
-const eraseSpeed = 60;
-const delayBetween = 1300;
+const typingSpeed = 100;   // ms per character when typing
+const erasingSpeed = 50;   // ms per character when deleting
+const delayAfterWord = 1200; // pause after completing a word
 
-function typeWord() {
-  if (!dyn) return;
-
+function typeEffect() {
   const currentWord = words[wordIndex];
 
-  // typing forward
   if (!isDeleting && charIndex <= currentWord.length) {
     dyn.textContent = currentWord.substring(0, charIndex);
-    dyn.style.visibility = "visible";
-    dyn.style.textShadow = "0 0 15px rgba(0,170,255,0.75)";
-    dyn.style.color = "#00aaff";
     charIndex++;
-    setTimeout(typeWord, typeSpeed);
-  }
-
-  // finished word → pause → start deleting
-  else if (!isDeleting && charIndex > currentWord.length) {
-    setTimeout(() => {
-      isDeleting = true;
-      typeWord();
-    }, delayBetween);
-  }
-
-  // deleting
+    setTimeout(typeEffect, typingSpeed);
+  } 
   else if (isDeleting && charIndex >= 0) {
     dyn.textContent = currentWord.substring(0, charIndex);
     charIndex--;
-    setTimeout(typeWord, eraseSpeed);
-  }
-
-  // done deleting → move to next
+    setTimeout(typeEffect, erasingSpeed);
+  } 
+  else if (!isDeleting && charIndex > currentWord.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, delayAfterWord);
+  } 
   else if (isDeleting && charIndex < 0) {
     isDeleting = false;
     wordIndex = (wordIndex + 1) % words.length;
-    setTimeout(typeWord, 400);
+    setTimeout(typeEffect, 400);
   }
 }
 
 window.addEventListener("load", () => {
   dyn.textContent = "";
-  setTimeout(typeWord, 400);
+  typeEffect();
 });
 
-/* Cursor blinking stays active */
-setInterval(() => {
-  if (cursor) cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
-}, 600);
 
 /* ---------- NAVBAR glass effect on scroll (works on all pages) ---------- */
 const navbar = document.getElementById("navbar");
