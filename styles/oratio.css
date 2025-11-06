@@ -13,7 +13,7 @@
 .course-hero .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../files/images/courses/oratiohero.png') center/cover no-repeat;
+  background: url('../files/images/courses/oratiohero.jpg') center/cover no-repeat;
   filter: blur(6px) brightness(0.6);
   z-index: 1;
 }

@@ -63,7 +63,7 @@
   flex: 1 1 280px;
   max-width: 350px;
   background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);  
   border-radius: 22px;
   padding: 2rem 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 179, 255, 0.15);

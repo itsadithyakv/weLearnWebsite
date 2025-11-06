@@ -269,7 +269,7 @@
 .feature-card {
   background: rgba(255,255,255,0.12);
   border-radius: 16px;
-  padding: 2rem 1.5rem;
+  padding: rem 1.5rem;
   backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
