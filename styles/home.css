@@ -49,7 +49,7 @@
 .photo-collage{ position:absolute; right:4%; top:50%; transform:translateY(-50%); width:820px; height:600px; perspective:1400px; z-index:4; pointer-events:auto; transition: transform .12s linear; }
 .photo-card{ position:absolute; width:300px; height:380px; background:#fff; border-radius:12px; overflow:hidden; border:8px solid #fff; box-shadow:0 26px 80px rgba(0,8,18,0.7); transform: rotate(var(--rotate)) translateZ(0); transition: transform .45s cubic-bezier(.2,.9,.3,1), box-shadow .35s ease; display:flex; flex-direction:column; justify-content:flex-end; }
 .photo-card img{ width:100%; height: calc(100% - 64px); object-fit:cover; display:block; }
-.photo-card .caption{ padding:12px; text-align:center; font-family:"NatureMedium"; color:#122; background:#fff; border-top:1px solid rgba(0,0,0,0.04); }
+.photo-card .caption{ padding: 10px; text-align:center; font-size: 200%; font-family:"LazyDog"; color:#122; background:#fff; border-top:1px solid rgba(0,0,0,0.04); }
 
 /* hover */
 .photo-card:hover{ transform: rotate(0deg) scale(1.16) translateY(-20px); z-index:12; box-shadow:0 40px 110px rgba(0,8,18,0.85); }
@@ -269,7 +269,7 @@
 .feature-card {
   background: rgba(255,255,255,0.12);
   border-radius: 16px;
-  padding: rem 1.5rem;
+  padding: 2rem 1.5rem;
   backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
@@ -301,7 +301,7 @@
 
 /* Headings inside cards */
 .feature-card h4 {
-  font-family: "NatureMedium";
+  font-family: "NatureBold";
   font-size: 1.2rem;
   margin-bottom: 0.4rem;
   transition: transform 0.35s ease, color 0.35s ease;
@@ -386,7 +386,7 @@
 }
 
 .testimonial-card {
-  flex: 0 0 15%;
+  flex: 0 0 15%; /* compact width for 3-4 cards visible */
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(12px);
   border-radius: 16px;
@@ -404,7 +404,7 @@
 }
 
 .testimonial-card h4 {
-  font-family: "NatureMedium";
+  font-family: "NatureRegular";
   font-size: 1rem;
   margin: 0;
 }
@@ -474,7 +474,7 @@
 
 .cta-right {
   flex: 1 1 50%;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(16px);
   border-left: 1px solid rgba(255,255,255,0.2);
   display: flex;
@@ -547,7 +547,7 @@
   transform: rotate(var(--rot, 0deg));
   opacity: 0.25; 
   mix-blend-mode: screen;
-  filter: invert(90%) sepia(100%) hue-rotate(10deg) brightness(1.2); 
+  filter: invert(90%) sepia(10%) hue-rotate(10deg) brightness(1.2); 
   animation: gentleMove var(--speed, 12s) ease-in-out infinite alternate;
   transition: transform 0.4s ease, opacity 0.3s ease;
 }

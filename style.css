@@ -31,6 +31,10 @@
   font-family: 'ExtraLight';
   src: url('fonts/ZTNature-ExtraLight.woff2');
 }
+@font-face {
+  font-family: 'LazyDog';
+  src: url('fonts/lazy_dog.ttf') format('truetype');
+}
 
 :root{
   --bg:#071018;

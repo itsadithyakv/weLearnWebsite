@@ -217,7 +217,7 @@
 }
 
 .value-card h4 {
-  font-family: "NatureMedium";
+  font-family: "NatureRegular";
   font-size: 1.25rem;
   margin-bottom: 0.6rem;
   color: #eef9ff;
@@ -307,7 +307,7 @@
 .timeline-item.right .timeline-card { margin-left: 3rem; }
 
 .timeline-card h4 {
-  font-family: "NatureMedium";
+  font-family: "NatureRegular";
   font-size: 1.3rem;
   color: #eef9ff;
   margin-bottom: 0.6rem;
