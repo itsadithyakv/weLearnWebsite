@@ -110,7 +110,7 @@
 }
 
 .level-card {
-background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.22);
   border-radius: 16px;
   padding: 2rem 1.5rem;
   backdrop-filter: blur(14px);
@@ -126,9 +126,9 @@ background: rgba(255, 255, 255, 0.22);
 }
 
 .level-card:hover {
-  background: rgba(0,179,255,0.15);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 179, 255, 0.3);
+  transform: translateY(-10px) scale(1.08) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 28px 60px rgba(0,170,255,0.35);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .level-card h3 {
@@ -177,8 +177,6 @@ display: grid;
   border-radius: 16px;
   padding: 2rem 1.5rem;
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #eef9ff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,9 +197,9 @@ display: grid;
 }
 
 .outcomes-section .outcome-card:hover {
-  background: rgba(0,179,255,0.15);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 179, 255, 0.3);
+  transform: translateY(-10px) scale(1.08) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 28px 60px rgba(0,170,255,0.35);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .outcomes-section .section-title {
@@ -269,9 +267,9 @@ display: grid;
 
 /* Glow animation */
 @keyframes pulse-glow {
-  0% { text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4); }
-  50% { text-shadow: 0 0 10px #00e0ff, 0 0 18px rgba(0,224,255,0.5); }
-  100% { text-shadow: 0 0 6px #00b3ff, 0 0 12px rgba(0,179,255,0.4); }
+  0% { text-shadow: 0 0 6px #00b3ff, 0 0 5px rgba(0,179,255,0.4); }
+  50% { text-shadow: 0 0 10px #00e0ff, 0 0 10px rgba(0,224,255,0.5); }
+  100% { text-shadow: 0 0 6px #00b3ff, 0 0 5px rgba(0,179,255,0.4); }
 }
 
 /* ---------- RESPONSIVE ---------- */
