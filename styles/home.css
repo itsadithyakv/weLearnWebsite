@@ -31,8 +31,19 @@
 }
 
 
-.btn-primary.cta-hero{ display:inline-block; background:linear-gradient(90deg,#00b3ff,#00e0ff); color:#022026; padding:.8rem 1.3rem; border-radius:14px; font-weight:700; box-shadow:0 10px 40px rgba(0,170,255,0.14); text-decoration:none; transition: transform .18s ease, box-shadow .18s ease; }
-.btn-primary.cta-hero:hover{ transform: translateY(-6px); box-shadow:0 22px 60px rgba(0,170,255,0.22); }
+.btn-primary.cta-hero{ display:inline-block; 
+  background:linear-gradient(90deg,#00b3ff,#00e0ff); 
+  color:#022026; 
+  padding:.8rem 1.3rem; 
+  border-radius:14px; font-weight:700; 
+  box-shadow:0 10px 40px rgba(0,170,255,0.14); 
+  text-decoration:none; 
+  transition: transform .18s ease, box-shadow .18s ease; 
+}
+.btn-primary.cta-hero:hover{ 
+  transform: translateY(-6px); 
+  box-shadow:0 22px 60px rgba(0,170,255,0.22); 
+}
 
 /* PHOTO COLLAGE - larger and positioned to the right */
 .photo-collage{ position:absolute; right:4%; top:50%; transform:translateY(-50%); width:820px; height:600px; perspective:1400px; z-index:4; pointer-events:auto; transition: transform .12s linear; }
@@ -250,13 +261,13 @@
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
-  z-index: 20; /* ensure grid is above section background */
+  z-index: 20;
   position: relative;
 }
 
 /* Glassmorphic cards */
 .feature-card {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255,255,255,0.12);
   border-radius: 16px;
   padding: 2rem 1.5rem;
   backdrop-filter: blur(14px);
@@ -375,7 +386,7 @@
 }
 
 .testimonial-card {
-  flex: 0 0 15%; /* compact width for 3-4 cards visible */
+  flex: 0 0 15%;
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(12px);
   border-radius: 16px;
@@ -399,8 +410,7 @@
 }
 
 .testimonial-card:hover {
-  background: rgba(0,179,255,0.2);
-  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .testimonial-dots {
@@ -464,7 +474,7 @@
 
 .cta-right {
   flex: 1 1 50%;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.12);
   backdrop-filter: blur(16px);
   border-left: 1px solid rgba(255,255,255,0.2);
   display: flex;
@@ -524,7 +534,7 @@
 .cta-doodles {
   position: absolute;
   inset: 0;
-  z-index: 5; /* behind content */
+  z-index: 5;
   pointer-events: none;
 }
 
@@ -535,9 +545,9 @@
   left: var(--x, 20%);
   top: var(--y, 20%);
   transform: rotate(var(--rot, 0deg));
-  opacity: 0.25; /* slightly more visible */
-  mix-blend-mode: screen; /* helps black icons appear bright on dark bg */
-  filter: drop-shadow(0 0 12px #00b3ff) brightness(1.6) saturate(1.5);
+  opacity: 0.25; 
+  mix-blend-mode: screen;
+  filter: invert(90%) sepia(100%) hue-rotate(10deg) brightness(1.2); 
   animation: gentleMove var(--speed, 12s) ease-in-out infinite alternate;
   transition: transform 0.4s ease, opacity 0.3s ease;
 }
